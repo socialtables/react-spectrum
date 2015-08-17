@@ -80,8 +80,8 @@
 
 	var Home = __webpack_require__(153);
 
-	var html = React.renderToString(React.createElement(Home));
-	console.log(html);
+	// var html = React.renderToString(React.createElement(Home));
+	// console.log(html);
 
 	if (typeof document !== 'undefined') {
 	  React.render(React.createElement(Home), document.getElementById('root'));
@@ -32262,7 +32262,7 @@
 	;(function(isNode) {
 
 		/**
-		 * Merge one or more objects 
+		 * Merge one or more objects
 		 * @param bool? clone
 		 * @param mixed,... arguments
 		 * @return object
@@ -32275,7 +32275,7 @@
 		}, publicName = 'merge';
 
 		/**
-		 * Merge two or more objects recursively 
+		 * Merge two or more objects recursively
 		 * @param bool? clone
 		 * @param mixed,... arguments
 		 * @return object
