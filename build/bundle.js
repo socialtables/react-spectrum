@@ -32262,7 +32262,7 @@
 	;(function(isNode) {
 
 		/**
-		 * Merge one or more objects
+		 * Merge one or more objects 
 		 * @param bool? clone
 		 * @param mixed,... arguments
 		 * @return object
@@ -32275,7 +32275,7 @@
 		}, publicName = 'merge';
 
 		/**
-		 * Merge two or more objects recursively
+		 * Merge two or more objects recursively 
 		 * @param bool? clone
 		 * @param mixed,... arguments
 		 * @return object
@@ -38269,7 +38269,8 @@
 	          container: {
 	            maxWidth: this.props.width + 'px',
 	            padding: '0 20px',
-	            margin: '0 auto'
+	            margin: '0 auto',
+	            position: 'relative'
 	          }
 	        }
 	      };
@@ -38826,17 +38827,26 @@
 	      }
 
 	      return React.createElement(
-	        Grid,
+	        'div',
 	        null,
 	        React.createElement(
-	          'div',
-	          { style: this.styles().sidebar, ref: 'sidebar' },
-	          React.createElement(Sidebar, { files: this.props.markdown, active: this.state.visible, primaryColor: this.props.primaryColor, bottom: this.props.bottom, fixed: this.state.sidebarFixed })
+	          'style',
+	          null,
+	          '\n          .rendered{\n            color: #607D8B; // blue grey 500\n          }\n          .rendered .hljs-comment {\n            color: #B0BEC5; // blue grey 200\n          }\n          .rendered .hljs-keyword{\n            color: #EF9A9A;  // red 200\n          }\n          .rendered .hljs-string{\n            color: #689F38; // light green 700\n          }\n          .rendered .hljs-title{\n          }\n          .text code{\n            background: #ddd;\n            padding: 1px 5px 3px;\n            border-radius: 2px;\n            box-shadow: inset 0 0 0 1px rgba(0,0,0,.03);\n            font-size: 85%;\n            vertical-align: bottom;\n          }\n          .markdown p{\n            margin: 15px 24px 15px 0;\n          }\n          .markdown h1{\n            font-size: 38px;\n            font-weight: 200;\n            color: rgba(0,0,0,.77);\n            margin: 0;\n            padding-top: 54px;\n            padding-bottom: 5px;\n          }\n          .markdown h2{\n            font-size: 26px;\n            line-height: 32px;\n            font-weight: 200;\n            color: rgba(0,0,0,.57);\n            padding-top: 20px;\n            margin-top: 20px;\n            margin-bottom: 10px;\n          }\n          .markdown h3{\n            font-weight: normal;\n            font-size: 20px;\n            padding-top: 20px;\n            margin-top: 20px;\n            color: rgba(0,0,0,.67);\n          }\n        '
 	        ),
 	        React.createElement(
-	          'div',
-	          { ref: 'files', style: this.styles().files },
-	          markdownFiles
+	          Grid,
+	          null,
+	          React.createElement(
+	            'div',
+	            { style: this.styles().sidebar, ref: 'sidebar' },
+	            React.createElement(Sidebar, { files: this.props.markdown, active: this.state.visible, primaryColor: this.props.primaryColor, bottom: this.props.bottom, fixed: this.state.sidebarFixed })
+	          ),
+	          React.createElement(
+	            'div',
+	            { ref: 'files', style: this.styles().files },
+	            markdownFiles
+	          )
 	        )
 	      );
 	    }
@@ -41176,11 +41186,6 @@
 	      return React.createElement(
 	        'div',
 	        { style: this.styles().markdown },
-	        React.createElement(
-	          'style',
-	          null,
-	          '\n          .text code{\n            background: #ddd;\n            padding: 1px 5px 3px;\n            border-radius: 2px;\n            box-shadow: inset 0 0 0 1px rgba(0,0,0,.03);\n            font-size: 85%;\n            vertical-align: bottom;\n          }\n\n          .markdown p{\n            margin: 15px 24px 15px 0;\n          }\n\n          .markdown h1{\n            font-size: 38px;\n            font-weight: 200;\n            color: rgba(0,0,0,.77);\n            margin: 0;\n            padding-top: 54px;\n            padding-bottom: 5px;\n          }\n\n          .markdown h2{\n            font-size: 26px;\n            line-height: 32px;\n            font-weight: 200;\n            color: rgba(0,0,0,.57);\n            padding-top: 20px;\n            margin-top: 20px;\n            margin-bottom: 10px;\n          }\n\n          .markdown h3{\n            font-weight: normal;\n            font-size: 20px;\n            padding-top: 20px;\n            margin-top: 20px;\n            color: rgba(0,0,0,.67);\n          }\n        '
-	        ),
 	        markdownFile
 	      );
 	    }
@@ -41311,11 +41316,6 @@
 	      return React.createElement(
 	        Raised,
 	        null,
-	        React.createElement(
-	          'style',
-	          null,
-	          '\n          .rendered{\n            color: #607D8B; // blue grey 500\n          }\n          .rendered .hljs-comment {\n            color: #B0BEC5; // blue grey 200\n          }\n          .rendered .hljs-keyword{\n            color: #EF9A9A;  // red 200\n          }\n          .rendered .hljs-string{\n            color: #689F38; // light green 700\n          }\n          .rendered .hljs-title{\n          }\n        '
-	        ),
 	        React.createElement(
 	          Tile,
 	          this.styles().Tile,

@@ -12,6 +12,7 @@ class Container extends ReactCSS.Component {
           maxWidth: this.props.width + 'px',
           padding: '0 20px',
           margin: '0 auto',
+          position: 'relative',
         },
       },
     };
