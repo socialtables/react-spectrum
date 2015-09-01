@@ -4,7 +4,8 @@
   "description": "A Collection of Color Pickers from Sketch, Photoshop, Chrome & more",
   "main": "lib/index.js",
   "scripts": {
-    "prepublish": "/node_modules/.bin/webpack -p"
+    "build": "./node_modules/.bin/webpack --progress",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
