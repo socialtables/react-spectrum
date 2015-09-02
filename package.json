@@ -4,7 +4,7 @@
   "description": "A Collection of Color Pickers from Sketch, Photoshop, Chrome & more",
   "main": "lib/index.js",
   "scripts": {
-    "build": "gulp build",
+    "build": "gulp prod",
     "prepublish": "npm run build"
   },
   "repository": {
