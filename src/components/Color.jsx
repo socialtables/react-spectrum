@@ -3,7 +3,8 @@
 var React = require('react');
 var ReactCSS = require('reactcss');
 var merge = require('merge');
-var _ = require('lodash');
+var debounce = require('lodash.debounce');
+var isPlainObject = require('lodash.isplainobject');
 var color = require('../helpers/color');
 
 var Photoshop = require('./photoshop/Photoshop');
@@ -31,7 +32,7 @@ class ColorPicker extends ReactCSS.Component {
       oldHue: props.color.h || defaultColor.h,
     });
 
-    this.debounce = _.debounce(function(fn, data) {
+    this.debounce = debounce(function(fn, data) {
       fn(data);
     }, 100);
 
@@ -103,7 +104,7 @@ class ColorPicker extends ReactCSS.Component {
       'left': this.props.position === 'left' && this.props.display !== null,
       'show': this.state.visible === true,
       'hide': this.state.visible === false,
-      'override': _.isPlainObject(this.props.positionCSS),
+      'override': isPlainObject(this.props.positionCSS),
     });
   }
 
