@@ -1,7 +1,7 @@
 'use strict';
 
 var React = require('react');
-var isString = require('lodash.isString');
+var isString = require('lodash.isstring');
 
 class Link extends React.Component {
 
