@@ -33,6 +33,7 @@
     "install": "^0.1.8",
     "lodash.debounce": "^3.1.1",
     "lodash.isplainobject": "^3.2.0",
+    "lodash.isstring": "^3.0.1",
     "lodash.throttle": "^3.0.4",
     "material-colors": "^1.0.0",
     "merge": "^1.2.0",

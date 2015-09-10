@@ -2,7 +2,7 @@
 
 var React = require('react');
 var ReactCSS = require('reactcss');
-var _ = require('lodash');
+var isString = require('lodash.isstring');
 
 var Tab = require('./Tab');
 var Link = require('./Link');
@@ -178,7 +178,7 @@ class Tabs extends ReactCSS.Component {
       var callback;
       var callbackValue;
       var newTab;
-      if (_.isString(tab)) {
+      if (isString(tab)) {
         label = tab;
         callback = null;
       } else {
