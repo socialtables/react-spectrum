@@ -2,14 +2,14 @@
 
 var React = require('react');
 var ReactCSS = require('reactcss');
-var _ = require('lodash');
+var throttle = require('lodash.throttle');
 
 class Saturation extends ReactCSS.Component {
 
   constructor(props) {
     super();
 
-    this.throttle = _.throttle(function(fn, data) {
+    this.throttle = throttle(function(fn, data) {
       fn(data);
     }, 50);
 

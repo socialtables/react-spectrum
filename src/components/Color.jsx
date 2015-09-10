@@ -3,7 +3,8 @@
 var React = require('react');
 var ReactCSS = require('reactcss');
 var merge = require('merge');
-var _ = require('lodash');
+var debounce = require('lodash.debounce');
+var isPlainObject = require('lodash.isplainobject');
 var color = require('../helpers/color');
 
 var Photoshop = require('./photoshop/Photoshop');
@@ -14,6 +15,13 @@ var Slider = require('./slider/Slider');
 var Material = require('./material/Material');
 var Compact = require('./compact/Compact');
 
+var defaultColor = {
+  h: 250,
+  s: .50,
+  l: .20,
+  a: 1,
+};
+
 class ColorPicker extends ReactCSS.Component {
 
   constructor(props) {
@@ -21,9 +29,10 @@ class ColorPicker extends ReactCSS.Component {
 
     this.state = merge(color.toState(props.color), {
       visible: props.display,
+      oldHue: props.color.h || defaultColor.h,
     });
 
-    this.debounce = _.debounce(function(fn, data) {
+    this.debounce = debounce(function(fn, data) {
       fn(data);
     }, 100);
 
@@ -95,7 +104,7 @@ class ColorPicker extends ReactCSS.Component {
       'left': this.props.position === 'left' && this.props.display !== null,
       'show': this.state.visible === true,
       'hide': this.state.visible === false,
-      'override': _.isPlainObject(this.props.positionCSS),
+      'override': isPlainObject(this.props.positionCSS),
     });
   }
 
@@ -170,12 +179,7 @@ class ColorPicker extends ReactCSS.Component {
 }
 
 ColorPicker.defaultProps = {
-  color: {
-    h: 250,
-    s: .50,
-    l: .20,
-    a: 1,
-  },
+  color: defaultColor,
   display: null,
   type: 'sketch',
   position: 'right',

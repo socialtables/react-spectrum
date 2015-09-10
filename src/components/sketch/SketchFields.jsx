@@ -6,7 +6,7 @@ var color = require('../../helpers/color');
 
 var { EditableInput } = require('../common');
 
-class ShetchFields extends ReactCSS.Component {
+class SketchFields extends ReactCSS.Component {
 
   constructor() {
     super();
@@ -103,4 +103,4 @@ class ShetchFields extends ReactCSS.Component {
 
 }
 
-module.exports = ShetchFields;
+module.exports = SketchFields;
