@@ -1,7 +1,7 @@
 {
   "name": "react-spectrum",
   "version": "1.2.2",
-  "description": "A Collection of Color Pickers from Sketch, Photoshop, Chrome & more - Forked from @casesandberg/resct-color",
+  "description": "A Collection of Color Pickers from Sketch, Photoshop, Chrome & more - Forked from @casesandberg/react-color",
   "main": "lib/index.js",
   "scripts": {
     "build": "gulp prod",
