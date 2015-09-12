@@ -1,5 +1,7 @@
 # [React Spectrum](http://socialtables.github.io/react-spectrum/)
 
+Originally began as a fork of [React Color](http://github.com/casesandberg/react-color)
+
 * **7 Different Pickers** - Sketch, Photoshop, Chrome and many more
 
 * **Popup or Block** - It can be used it as a popup or always visible
