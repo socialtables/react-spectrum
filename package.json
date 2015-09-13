@@ -32,7 +32,6 @@
     "spectrum"
   ],
   "dependencies": {
-    "install": "^0.1.8",
     "lodash.debounce": "^3.1.1",
     "lodash.isplainobject": "^3.2.0",
     "lodash.isstring": "^3.0.1",
