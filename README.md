@@ -1,4 +1,6 @@
-# [React Color](http://casesandberg.github.io/react-color/)
+# [React Spectrum](http://socialtables.github.io/react-spectrum/)
+
+Originally began as a fork of [React Color](http://github.com/casesandberg/react-color)
 
 * **7 Different Pickers** - Sketch, Photoshop, Chrome and many more
 
@@ -11,16 +13,16 @@
 ## Installation & Usage
 
 ```
-npm install react-color --save
+npm install react-spectrum --save
 ```
 
 ### Include the Component
 
 ```
-var React = require('react');
-var ColorPicker = require('react-color');
+import React, { Component } from "react";
+import ColorPicker from "react-spectrum";
 
-class Component extends React.Component {
+class ColorThing extends Component {
 
   render() {
     return <ColorPicker type="sketch" />;
@@ -32,10 +34,10 @@ class Component extends React.Component {
 Display the color picker popup on click, or don't define display and it will always be visible.
 
 ```
-var React = require('react');
-var ColorPicker = require('react-color');
+import React, { Component } from "react";
+import ColorPicker from "react-spectrum";
 
-class Component extends React.Component {
+class ColorThing extends Component {
 
   constructor() {
     super();
